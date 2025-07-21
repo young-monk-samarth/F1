@@ -130,7 +130,7 @@ export const DriverStandings = () => {
         >
           <span className="text-red-600 italic">DRIVER STANDINGS</span>
           <span className="text-white"> 🚥</span>
-          <span className="text-white"> 2024</span>
+          <span className="text-white"> 2025</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6 w-full">
