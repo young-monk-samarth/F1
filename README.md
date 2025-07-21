@@ -36,15 +36,16 @@ Your ultimate Formula 1 destination for real-time driver standings, race schedul
 f1-world/
 ├── public/
 ├── src/
-│ ├── components/
-│ ├── pages/
-│ ├── hooks/
-│ ├── lib/
-│ └── main.tsx
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── lib/
+│   └── main.tsx
 ├── tailwind.config.ts
 ├── vite.config.ts
 ├── tsconfig.json
 └── package.json
+
 
 
 ---
