@@ -4,7 +4,7 @@ Your ultimate Formula 1 destination for real-time driver standings, race schedul
 
 ---
 
-## 📸 Preview
+## 📸 
 
 ![F1 World – Grand Prix Display](./preview.png)
 
