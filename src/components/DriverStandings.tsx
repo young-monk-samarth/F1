@@ -97,8 +97,8 @@ export const DriverStandings = () => {
 
   if (loading) {
     return (
-      <section id="standings" className="py-24 px-6">
-        <div className="container mx-auto">
+      <section id="standings" className="py-24 px-4">
+        <div className="container mx-auto px-0">
           <h2 className="text-4xl font-bold text-center mb-12">
             <span className="text-red-600">DRIVER</span>
             <span className="text-white"> STANDINGS</span>
@@ -114,8 +114,8 @@ export const DriverStandings = () => {
   }
 
   return (
-    <section id="standings" className={`py-24 px-6 ${location.pathname === '/standings' ? 'pt-32' : ''}`}>
-      <div className="container mx-auto">
+    <section id="standings" className={`py-24 px-0 sm:px-6 ${location.pathname === '/standings' ? 'pt-32' : ''}`}>
+      <div className="container mx-auto px-4">
         <motion.h2
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -126,14 +126,14 @@ export const DriverStandings = () => {
             damping: 12,
             duration: 0.8
           }}
-          className="text-4xl font-bold text-center mb-12"
+          className="text-3xl sm:text-4xl font-bold text-center mb-12"
         >
-          <span className="text-red-600 italic  ">DRIVER STANDINGS</span>
+          <span className="text-red-600 italic">DRIVER STANDINGS</span>
           <span className="text-white"> 🚥</span>
           <span className="text-white"> 2024</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6 w-full">
           {standings.map((standing, index) => {
             const driverNumber = standing.Driver.permanentNumber;
             const driverCode = standing.Driver.code;
@@ -161,40 +161,46 @@ export const DriverStandings = () => {
                   duration: 0.8
                 }}
                 whileHover={{ scale: 1.03 }}
+                className="w-full"
               >
-                <Card className={`p-6 transition-all duration-300 ${getPositionColor(standing.position)} h-full min-h-[140px] flex items-center`}>
-                  <div className="flex items-center justify-between w-full">
-                    <div className="flex items-center gap-6">
-                      <div className="flex items-center justify-center w-16 h-16">
+                <Card className={`p-3 sm:p-6 transition-all duration-300 ${getPositionColor(standing.position)} min-h-[110px] sm:min-h-[140px] flex items-center`}>
+                  <div className="flex items-center justify-between w-full gap-2 sm:gap-4 overflow-hidden">
+                    <div className="flex items-center gap-2 sm:gap-6 min-w-0 flex-1">
+                      <div className="flex items-center justify-center w-10 h-10 sm:w-16 sm:h-16 flex-shrink-0">
                         {getPositionIcon(standing.position)}
                       </div>
                       
-                      <div className="flex items-center gap-4">
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-4 min-w-0 flex-1">
                         {imageUrl && (
                           <img
                             src={imageUrl}
                             alt={`${standing.Driver.givenName} ${standing.Driver.familyName}`}
-                            className="w-16 h-16 rounded-full border-2 border-primary object-cover"
+                            className="w-10 h-10 sm:w-16 sm:h-16 rounded-full border-2 border-primary object-cover flex-shrink-0"
                             onError={(e) => {
                               const target = e.target as HTMLImageElement;
                               target.src = `https://ui-avatars.com/api/?name=${standing.Driver.givenName}+${standing.Driver.familyName}&background=dc2626&color=ffffff&size=128&font-size=0.6`;
                             }}
                           />
                         )}
-                        <div>
-                          <h3 className="text-2xl font-bold text-foreground">
+                        <div className="min-w-0">
+                          <h3 className="text-base sm:text-2xl font-bold text-foreground truncate">
                             {standing.Driver.givenName} <span className="whitespace-nowrap">{standing.Driver.familyName}</span>
                           </h3>
-                          <p className="text-muted-foreground">
-                            {standing.Constructors[0]?.name} • {standing.Driver.nationality}
-                          </p>
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                            <p className="text-xs text-muted-foreground truncate">
+                              {standing.Constructors[0]?.name}
+                            </p>
+                            <p className="text-xs text-muted-foreground">
+                              • {standing.Driver.nationality}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
 
-                    <div className="text-right">
-                      <div className="text-3xl font-bold text-primary">{standing.points}</div>
-                      <div className="text-sm text-muted-foreground">
+                    <div className="flex flex-col items-end flex-shrink-0 pl-2">
+                      <div className="text-lg sm:text-3xl font-bold text-primary whitespace-nowrap">{standing.points}</div>
+                      <div className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">
                         {standing.wins} {standing.wins === '1' ? 'win' : 'wins'}
                       </div>
                     </div>

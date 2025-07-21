@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
-  <defs>
-    <clipPath id="clip">
-      <rect width="64" height="64" rx="12"/>
-    </clipPath>
-  </defs>
-  <image href="f1-hero.jpg" width="64" height="64" clip-path="url(#clip)"/>
-</svg>

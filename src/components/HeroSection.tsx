@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
-import f1CarImage from '../assets/f1-car.png';
 import backgroundImage from '../assets/f1-hero.jpg'; // Add this import for your background image
 
 export const HeroSection = () => {
@@ -145,7 +144,7 @@ export const HeroSection = () => {
           <motion.div
             key={i}
             initial={{ x: "-100%" }}
-            animate={{ x: "100vw" }}
+            animate={{ x: "100%" }}
             transition={{
               duration: 3 + i,
               repeat: Infinity,
