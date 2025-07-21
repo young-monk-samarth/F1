@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
+# 🏁 F1 World – Grand Prix Display
 
-## Project info
+Your ultimate Formula 1 destination for real-time driver standings, race schedules, and detailed driver stats — built with modern frontend tools.
 
-**URL**: https://lovable.dev/projects/e643d2c9-ec07-411c-9da2-d282eee96109
+---
 
-## How can I edit this code?
+## 📸 Preview
 
-There are several ways of editing your application.
+![F1 World – Grand Prix Display](./preview.png)
 
-**Use Lovable**
+> Experience the thrill of Formula 1 racing with real-time data, updated every 30 seconds.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e643d2c9-ec07-411c-9da2-d282eee96109) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## ⚙️ Tech Stack
 
-**Use your preferred IDE**
+- ⚡ **Vite** – Fast frontend tooling  
+- ⚛️ **React** – UI library  
+- 🦾 **TypeScript** – Type safety  
+- 🎨 **Tailwind CSS** – Utility-first CSS framework  
+- 🧩 **lucide-react** – Icon library
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Features
 
-Follow these steps:
+- Real-time **F1 driver standings**
+- Interactive **race calendar** and schedules
+- Detailed **driver profiles** and stats
+- Fully **responsive** user interface
+- Clean and **accessible** components with modern design
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📁 Project Structure
+f1-world/
+├── public/
+├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── hooks/
+│ ├── lib/
+│ └── main.tsx
+├── tailwind.config.ts
+├── vite.config.ts
+├── tsconfig.json
+└── package.json
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e643d2c9-ec07-411c-9da2-d282eee96109) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+🏎 Built for F1 fans with speed and style.  
+💬 Open to feedback and collaboration: [Connect on LinkedIn](https://www.linkedin.com/in/samarthmuktamath)
